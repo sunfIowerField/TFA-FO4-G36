@@ -1,0 +1,29 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\fo4_g36complex\g36_body_d"
+	"$bumpmap" "models\weapons\fo4_g36complex\g36_body_n"
+	"$phongexponenttexture" "models\weapons\fo4_g36complex\g36_body_e"
+	
+	"$color2" "[ .8 .8 .8 ]"
+	//"$blendtintbybasealpha" "1"
+	
+	
+	"$phong" "1"
+	"$phongboost" "4"
+	//"$phongwarptexture" "models\weapons\rtx\m800/phongwarp_steel"
+	"$phongfresnelranges"           "[ .4 .7 1]"
+	
+	"$envmap"					"env_cubemap"
+	"$envmapfresnel" "1"
+	"$envmaptint" "[ 1 1 1 ]"
+	"$basemapalphaenvmapmask" "1"
+	
+	"Proxies"
+	{
+		"MwEnvMapTint"
+		{
+			"min" "0"
+			"max" "0.015"
+		}
+	}
+}
