@@ -2,6 +2,5 @@
 F34R's G36 ported to TFA
 
 ## Requirements:
-TFA Base
-
-TFA Insurgency: Shared Parts
+* TFA Base
+* TFA Insurgency: Shared Parts
