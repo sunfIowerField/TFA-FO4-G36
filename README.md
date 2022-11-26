@@ -1,2 +1,6 @@
 # TFA Fallout 4 G36
-wagwag
+F34R's G36 ported to TFA
+
+##Requirements
+TFA Base
+TFA Insurgency: Shared Parts
