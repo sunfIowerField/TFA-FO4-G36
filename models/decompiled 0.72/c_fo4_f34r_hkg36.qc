@@ -415,6 +415,7 @@ $sequence "holster" {
 
 $sequence "walk" {
 	"c_fo4_f34r_hkg36_anims\walk.smd"
+	activity "ACT_VM_WALK" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 30

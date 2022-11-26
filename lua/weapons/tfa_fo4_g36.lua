@@ -18,7 +18,7 @@ SWEP.Weight				= 30			-- This controls how "good" the weapon is for autopickup.
 
 --[[WEAPON HANDLING]]--
 SWEP.Primary.Sound = Sound("TFA_FO4_G36.Fire") -- This is the sound of the weapon, when you shoot.
-SWEP.Primary.SilencedSound = Sound("TFA_INS2.M9.2") -- This is the sound of the weapon, when silenced.
+SWEP.Primary.SilencedSound = Sound("TFA_FO4_G36.SupFire") -- This is the sound of the weapon, when silenced.
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
 SWEP.Primary.Damage = 26 -- Damage, in standard damage points.
 SWEP.Primary.DamageTypeHandled = true --true will handle damagetype in base
@@ -195,6 +195,7 @@ SWEP.IdleAnimation = {
 		["is_idle"] = true
 	},
 }
+
 SWEP.WalkAnimation = {
 	["loop"] = {
 	["type"] = TFA.Enum.ANIMATION_SEQ,
@@ -286,13 +287,12 @@ SWEP.AnimCycle = 0 -- Start on the right
 SWEP.Attachments = {
 	[1] = { offset = { 0, 0 }, atts = { "ins2_br_supp" }, order = 1 },
 	[3] = { offset = { 0, 0 }, atts = { "am_match", "am_magnum" }, order = 3 },
-	[6] = { offset = { 0, 0 }, atts = { "ins2_ub_laser" }, order = 2 },
 }
 SWEP.AttachmentDependencies = {}
 SWEP.AttachmentExclusions = {}
 
 SWEP.VElements = {
-	["suppressor"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_suppressor_pistol.mdl", bone = "A_Suppressor", rel = "", pos = Vector(0, 0, 0), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = true, active = false },
+	["suppressor"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_suppressor_pistol.mdl", bone = "ProjectileNode", rel = "", pos = Vector(0, -20.9, 0.45), angle = Angle(0, 90, 0), size = Vector(1.4, 1.4, 1.4), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = false, active = false },
 	["laser"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_laser_m9.mdl", bone = "A_Underbarrel", rel = "", pos = Vector(0, 0, 0), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = true, active = false },
 	["laser_beam"] = { type = "Model", model = "models/tfa/lbeam.mdl", bone = "LaserPistol", rel = "laser", pos = Vector(0, 0, 0), angle = Angle(0, 90, 0), size = Vector(2, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = false },
 }
