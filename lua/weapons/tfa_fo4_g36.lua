@@ -308,3 +308,5 @@ SWEP.LaserSightModAttachment = 1
 SWEP.LaserSightModAttachmentWorld = 4
 
 DEFINE_BASECLASS( SWEP.Base )
+
+--hi github!!!
