@@ -1,7 +1,7 @@
 SWEP.Base				= "tfa_gun_base"
 SWEP.Category				= "TFA FO4" --The category.  Please, just choose something generic or something I've already done if you plan on only doing like one swep..
 SWEP.Manufacturer = "Heckler & Koch" --Gun Manufactrer (e.g. Hoeckler and Koch )
-SWEP.Author				= "thatrtxdude" --Author Tooltip
+SWEP.Author				= "thatrtxdude, AidenTheZapperGuy, Dorian" --Author Tooltip
 SWEP.Contact				= "" --Contact Info Tooltip
 SWEP.Purpose				= "" --Purpose Tooltip
 SWEP.Instructions				= "" --Instructions Tooltip
@@ -17,7 +17,7 @@ SWEP.AutoSwitchFrom			= true		-- Auto switch from if you pick up a better weapon
 SWEP.Weight				= 30			-- This controls how "good" the weapon is for autopickup.
 
 --[[WEAPON HANDLING]]--
-SWEP.Primary.Sound = Sound("TFA_INS2.M9.1") -- This is the sound of the weapon, when you shoot.
+SWEP.Primary.Sound = Sound("TFA_FO4_G36.Fire") -- This is the sound of the weapon, when you shoot.
 SWEP.Primary.SilencedSound = Sound("TFA_INS2.M9.2") -- This is the sound of the weapon, when silenced.
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
 SWEP.Primary.Damage = 26 -- Damage, in standard damage points.
@@ -92,7 +92,7 @@ SWEP.Bodygroups_V = nil
 --[[WORLDMODEL]]--
 SWEP.WorldModel			= "models/weapons/tfa_ins2/w_m9.mdl" -- Weapon world model path
 SWEP.Bodygroups_W = nil
-SWEP.HoldType = "pistol" -- This is how others view you carrying the weapon. Options include:
+SWEP.HoldType = "ar2" -- This is how others view you carrying the weapon. Options include:
 -- normal melee melee2 fist knife smg ar2 pistol rpg physgun grenade shotgun crossbow slam passive
 -- You're mostly going to use ar2, smg, shotgun or pistol. rpg and crossbow make for good sniper rifles
 SWEP.Offset = {
@@ -165,15 +165,7 @@ SWEP.IronSightHoldTypeOverride = "" --This variable overrides the ironsights hol
 SWEP.SprintHoldTypeOverride = "" --This variable overrides the sprint holdtype, choosing it instead of something from the above tables.  Change it to "" to disable.
 --[[ANIMATION]]--
 
-SWEP.StatusLengthOverride = {
-	[ACT_VM_RELOAD] = 64 / 30,
-	[ACT_VM_RELOAD_EMPTY] = 64 / 30
-} --Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
-SWEP.SequenceLengthOverride = {
-	[ACT_VM_RELOAD] = 78 / 30,
-	[ACT_VM_RELOAD_EMPTY] = 78 / 30
-} --Changes both the status delay and the nextprimaryfire of a given animation
-SWEP.SequenceRateOverride = {}
+
 
 SWEP.ProceduralHoslterEnabled = nil
 SWEP.ProceduralHolsterTime = 0.3
@@ -261,7 +253,27 @@ SWEP.TracerCount 		= 3 	--0 disables, otherwise, 1 in X chance
 SWEP.ImpactEffect = nil--Impact Effect
 SWEP.ImpactDecal = nil--Impact Decal
 --[[EVENT TABLE]]--
-SWEP.EventTable = {}
+SWEP.EventTable = {
+	["reload"] = {
+		{time = 0, type = "sound", value = Sound("TFA_FO4_G36.StartReload")},
+		{time = 0.533333, type = "sound", value = Sound("TFA_FO4_G36.Magout")},
+		{time = 1.666667, type = "sound", value = Sound("TFA_FO4_G36.Maginsert")},
+		{time = 1.966667, type = "sound", value = Sound("TFA_FO4_G36.Magin")},
+		{time = 2.566667, type = "sound", value = Sound("TFA_FO4_G36.BoltBack")},
+		{time = 2.833333, type = "sound", value = Sound("TFA_FO4_G36.BoltForward")},
+		{time = 3, type = "sound", value = Sound("TFA_FO4_G36.EndRelaod")}
+	},
+	["draw_first"] = {
+		{time = 0.0, type = "sound", value = Sound("TFA_FO4_G36.StartReload")},
+		{time = 0.666667, type = "sound", value = Sound("TFA_FO4_G36.BoltBack")},
+		{time = 0.9666667, type = "sound", value = Sound("TFA_FO4_G36.BoltForward")},
+		{time = 1.066667, type = "sound", value = Sound("TFA_FO4_G36.EndReload")}
+	},
+	["inspect"] = {
+		{time = 0.4, type = "sound", value = Sound("TFA_FO4_G36.StartReload")},
+		{time = 5.0, type = "sound", value = Sound("TFA_FO4_G36.EndReload")}
+	},
+}
 --[[RENDER TARGET]]--
 SWEP.RTMaterialOverride = nil
 SWEP.RTOpaque = false

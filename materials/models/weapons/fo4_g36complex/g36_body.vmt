@@ -17,13 +17,4 @@
 	"$envmapfresnel" "1"
 	"$envmaptint" "[ 1 1 1 ]"
 	"$basemapalphaenvmapmask" "1"
-	
-	"Proxies"
-	{
-		"MwEnvMapTint"
-		{
-			"min" "0"
-			"max" "0.015"
-		}
-	}
 }
