@@ -14,4 +14,4 @@ F34R's G36 ported to TFA
 ## Addendum
 * Uncompressed Normal Maps
 * Semi-Auto only for now
-* Attachments will be added later on
+* More attachments will be added later on
