@@ -10,3 +10,8 @@ F34R's G36 ported to TFA
 * F34R - Animations, Textures, Meshes
 * Navaro - Sounds
 * Me - Materials, Converting Textures, Lua, Current Compile
+
+## Addendum
+* Uncompressed Normal Maps
+* Semi-Auto only for now
+* Attachments will be added later on
